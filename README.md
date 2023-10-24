@@ -1,4 +1,4 @@
-# getx_mvvm
+# Getx_MVVM
 
 A new Flutter project.
 
