@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_mvvm/res/assets/image_assets.dart';
-import 'package:getx_mvvm/res/fonts/app_fonts.dart';
+import 'package:getx_mvvm/res/components/internet_exception_widget.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,6 +13,9 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
+    return InternetExceptionWidget(
+      onPress: () {},
+    );
     return Scaffold(
       appBar: AppBar(
         title: const Text('Splash Screen'),
