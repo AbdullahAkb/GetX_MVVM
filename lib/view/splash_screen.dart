@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_mvvm/res/assets/image_assets.dart';
+import 'package:getx_mvvm/res/fonts/app_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +17,25 @@ class _SplashScreenState extends State<SplashScreen> {
       appBar: AppBar(
         title: const Text('Splash Screen'),
       ),
-      body: Container(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Center(
+            child: Image(
+              // height: 200,
+              // width: 200,
+              image: AssetImage(ImageAssets.logo),
+            ),
+          ),
+          Text(
+            "email_hint".tr,
+            style: const TextStyle(
+              fontSize: 30,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
