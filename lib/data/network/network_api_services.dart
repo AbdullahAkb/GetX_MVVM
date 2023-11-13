@@ -35,15 +35,21 @@ class NetworkApiServices extends BaseApiServices {
     dynamic responseJson;
     try {
       final response = await http
-          .post(Uri.parse(url), body: jsonEncode(data))
+          .post(
+            Uri.parse(url),
+            body: data,
+          )
           .timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
     } on SocketException {
-      throw InternetExceptions();
+      throw InternetExceptions(
+          "\nMake you're connected to an Internet Connection");
     } on RequestTimeout {
       throw RequestTimeout();
     }
-
+    if (kDebugMode) {
+      print(responseJson);
+    }
     return responseJson;
   }
 

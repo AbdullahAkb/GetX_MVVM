@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_mvvm/res/assets/image_assets.dart';
-import 'package:getx_mvvm/res/components/internet_exception_widget.dart';
+import 'package:getx_mvvm/view_models/services/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,32 +10,26 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  SplashServices splashServices = SplashServices();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    splashServices.isLogin();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return InternetExceptionWidget(
-      onPress: () {},
-    );
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Splash Screen'),
-      ),
+      backgroundColor: Colors.teal,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Center(
-            child: Image(
-              // height: 200,
-              // width: 200,
-              image: AssetImage(ImageAssets.logo),
-            ),
-          ),
-          Text(
-            "email_hint".tr,
-            style: const TextStyle(
-              fontSize: 30,
-            ),
-          )
+          Center(
+              child: Text(
+            'welcome'.tr,
+            textAlign: TextAlign.center,
+          )),
         ],
       ),
     );

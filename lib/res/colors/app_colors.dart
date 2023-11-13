@@ -7,10 +7,10 @@ class AppColors {
   static const Color primaryColor = Color(0xff0181C9);
   static const Color secondaryColor = Colors.black;
 
-  static const Color buttonPrimaryColor = Color(0xff0181C9);
+  static const Color buttonPrimaryColor = Color.fromARGB(255, 1, 158, 201);
   static const Color buttonSecondaryColor = Color(0xffFC3F5B);
 
-  static const Color redColors =Color(0xffFC3F5B);
+  static const Color redColors = Color(0xffFC3F5B);
 
   static const Color primaryTextColor = Color(0xff000000);
   static const Color secondaryTextColor = Color(0xff444648);

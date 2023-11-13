@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:getx_mvvm/res/routes/routes_name.dart';
-import 'package:getx_mvvm/view/login_screen.dart';
+import 'package:getx_mvvm/view/login/login_view.dart';
+
 import 'package:getx_mvvm/view/splash_screen.dart';
 
 class AppRoutes {
@@ -11,8 +12,8 @@ class AppRoutes {
             transitionDuration: const Duration(milliseconds: 250),
             transition: Transition.cupertino),
         GetPage(
-            name: RoutesName.loginScreen,
-            page: () => const LoginScreen(),
+            name: RoutesName.loginView,
+            page: () => const LoginView(),
             transitionDuration: const Duration(milliseconds: 250),
             transition: Transition.cupertino),
       ];
